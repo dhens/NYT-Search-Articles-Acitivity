@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NY TIMES API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="nytimes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+    
+          <div class="jumbotron text-center">
+            <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> NYT Article Search</h1>
+          </div>
+        </div>
+    
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Enter Your Search Here</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label for="searchTerm">Search Term:</label>
+                    <input type="text" class="form-control" id="searchTerm" placeholder="Search Term">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="numRecords">Number of Records to Retrieve:</label>
+                    <input type="number" class="form-control" id="numRecords" placeholder="5">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="startDate">Start Year (optional):</label>
+                    <input type="text" class="form-control" id="startDate" >
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="endDate">End Year (optional):</label>
+                    <input type="text" class="form-control" id="endDate" >
+                  </div>
+    
+                 
+                  <button type="submit" id="searchBtn" class="btn btn-default submit">Submit</button>
+                  <button type="reset" id="clearForm" class="btn btn-default reset">Clear Form</button>
+                </form>
+              </div>
+          </div>
+        </div>
+    
+        <div class="col-xs-12 col-sm-12 col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Search Results</div>
+              <div class="panel-body" id="searchResults">
+               
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script src="search.js"></script>
+    </html>
+   
